@@ -5,3 +5,4 @@ authors = ["tarpaha <ppopchikovsky@gmail.com>"]
 
 [dependencies]
 calamine = "0.14.10"
+byteorder = "1.2.7"
