@@ -95,7 +95,12 @@ impl Workbook {
     }
 }
 
+use std::time::Instant;
+
 fn main() {
+    let now = Instant::now();
     let workbook = Workbook::from_xls("data/flares.xls");
-    workbook.to_file("data/flares.bxls")
+    workbook.to_file("data/flares.bxls");
+    let elapsed = now.elapsed();
+    println!("Done in {} seconds", (elapsed.as_secs() as f64) + (elapsed.subsec_nanos() as f64 / 1000_000_000.0));
 }
